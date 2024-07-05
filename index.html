@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Unity Development</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet" />
+
+  <script type="text/javascript" src="/script.js"></script>
+  <script src="/coba.js"></script>
+  <script src="https://unpkg.com/feather-icons"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+  <header class="main-header bg-transparent">
+    <div class="container max-w-1200 mg-side-auto">
+      <div class="desktop-menu-wrapper position-relative">
+        <nav class="desktop-menu d-grid">
+          <div class="menu-left menu-item-wrapper d-flex">
+            <a href="">Home</a>
+            <a href="">Projects</a>
+          </div>
+          <div class="menu-right menu-item-wrapper d-flex">
+            <a href="">About</a>
+            <a href="">Contact</a>
+          </div>
+        </nav>
+        <div class="brand-wrapper">
+          <a href="">
+            <div class="logo-wrapper"><img src="/img/white-logo.png" alt="" /></div>
+          </a>
+        </div>
+      </div>
+      <div class="mobile-menu hidden"></div>
+    </div>
+  </header>
+
+  <div class="banner-box"></div>
+
+  <div class="service-box"></div>
+
+  <div class="project-box"></div>
+
+  <div class="testimonial-box"></div>
+
+  <div class="blog-box"></div>
+
+  <div class="cta-box"></div>
+
+  <footer>
+    <script>
+      $('.banner-box').load('components/banner.html');
+      $('.service-box').load('components/services.html');
+      $('.project-box').load('components/project.html');
+      $('.testimonial-box').load('components/testimonial.html');
+      $('.blog-box').load('components/blog.html');
+      $('.cta-box').load('components/footer.html');
+
+
+      feather.replace();
+      var header = $('header');
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 20) {
+          // Adjust the scroll threshold as needed
+          header.addClass('bg-hitam');
+          header.removeClass('bg-transparent');
+        } else {
+          header.addClass('bg-transparent');
+          header.removeClass('bg-hitam');
+        }
+      });
+    </script>
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<section class="section-home-4 section-testimonial">
+    <div class="container max-w-1200 mg-side-auto">
+        <div class="col-title d-grid">
+            <div class="col-left">
+                <h3 class="section-title">Testimonials</h3>
+            </div>
+            <div class="col-right">
+                <div class="section-subtitle">These testimonials reflect the commitment, innovation, and excellence we
+                    bring to every project.</div>
+            </div>
+        </div>
+        <div class="col-testimonial">
+            <div class="kotak-testimonial">
+                <div class="kotak-navigation d-grid">
+                    <div class="navigation-item active first client-first">
+                        <div class="image-wrapper">
+                            <img src="https://assets-global.website-files.com/65f58d547eeac29dc6ff7647/65fa052a9adc75e0bdb5d0bc_mason-wilkes-TMgQMXoglsM-unsplash%20(1)-p-500.webp"
+                                alt="Client 1">
+                        </div>
+                    </div>
+
+                    <div class="navigation-item second client-second">
+                        <div class="image-wrapper">
+                            <img src="https://assets-global.website-files.com/65f58d547eeac29dc6ff7647/65fa052ad0f1a0da5d2ae499_luise-and-nic-8lBnDu9Wn5w-unsplash-p-500.webp"
+                                alt="Client 1">
+                        </div>
+                    </div>
+
+                    <div class="navigation-item third client-third">
+                        <div class="image-wrapper">
+                            <img src="https://assets-global.website-files.com/65f58d547eeac29dc6ff7647/65fa052b40f3d2328882772d_tiago-felipe-ferreira-rxwumN1CEGs-unsplash%20(1)-p-500.webp"
+                                alt="Client 1">
+                        </div>
+                    </div>
+                </div>
+                <div class="testimoni-content-wrapper position-relative">
+                    <div class="testimoni-content aktif testimoni-first">
+                        <div class="testimoni-text">"Transformative partnership with Ageat agency, where innovation met
+                            success, and our digital journey soared."</div>
+                        <div class="client-name-wrapper">
+                            <div class="client-name">John Pearson</div>
+                            <div class="client-position">Digital Project Manager</div>
+                        </div>
+                    </div>
+                    <div class="testimoni-content testimoni-second">
+                        <div class="testimoni-text">"Exceptional results and innovation – this agency turned our vision
+                            into digital triumph. Incredible results."</div>
+                        <div class="client-name-wrapper">
+                            <div class="client-name">Siena Whitney</div>
+                            <div class="client-position">Web Designer</div>
+                        </div>
+                    </div>
+                    <div class="testimoni-content testimoni-third">
+                        <div class="testimoni-text">"Their innovative solutions and unwavering dedication elevated our
+                            digital presence beyond expectations. A trusted partner in our success journey!"</div>
+                        <div class="client-name-wrapper">
+                            <div class="client-name">Larry Warner</div>
+                            <div class="client-position">Web Developer</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    $('.navigation-item').click(function () {
+        // Remove 'active' class from all navigation items
+        $('.navigation-item').removeClass('active');
+
+        // Add 'active' class to the clicked navigation item
+        $(this).addClass('active');
+
+        // Get the second class of the clicked element
+        var secondClass = $(this).attr('class').split(' ')[1];
+        console.log("Second class:", secondClass);
+
+        $('.testimoni-content').removeClass('aktif');
+        $('.testimoni-' + secondClass).addClass('aktif');
+    });
+</script>

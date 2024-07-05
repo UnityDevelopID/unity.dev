@@ -1,0 +1,237 @@
+@import 'responsive-homepage.css';
+
+/* Banner Home */
+.banner-home {
+  background-image: url('/img/bg-unity2-a.webp');
+  background-color: #101010;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-position: 50%; */
+}
+
+.banner-home .container {
+  height: calc(100vh - 86px);
+  width: 100%;
+  align-items: center;
+  color: white;
+  text-align: center;
+  padding-top: 86px;
+}
+
+.banner-home .section-content {
+  width: 720px;
+}
+
+.banner-home .section-subtitle {
+  font-size: 1.5rem;
+  line-height: 1.1;
+  color: #c4c4c4;
+  font-family: var(--font-archivo);
+  font-weight: 300;
+  width: 480px;
+  margin-top: 1rem;
+}
+
+.banner-home .scroll-wrapper {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 100%;
+  width: 7rem;
+  height: 7rem;
+  /* padding: 0.2rem 0.2rem 0rem 0.2rem; */
+  padding: 4px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.banner-home .scroll-wrapper .rotate-image {
+  animation: muter 15s linear infinite;
+}
+
+.banner-home .scroll-wrapper .scroll-down svg {
+  width: 35px;
+  height: 35px;
+}
+
+@keyframes muter {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* End of Banner Home */
+
+/* Section Home 2 */
+.section-home-2 {
+  background-image: url('/img/bg-home-2.webp');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #ededef;
+  transition: all 0.3s linear;
+}
+
+.section-home-2 .section-content {
+  grid-template-columns: auto minmax(1rem, 25rem);
+  padding-bottom: 3rem;
+}
+
+.section-home-2 .section-content .col-kanan {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: 1.1;
+}
+
+.section-home-2 .section-service-wrapper {
+  grid-column-gap: 3rem;
+  grid-row-gap: 3rem;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-items: stretch;
+}
+
+.section-home-2 .service-card {
+  background: #c1c1c2;
+  border-radius: 1.25rem;
+  padding: 3rem 2rem;
+  height: 24rem;
+  transition: box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  color: #101010;
+  display: grid;
+  align-content: space-between;
+}
+
+.section-home-2 .service-card:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.section-home-2 .service-card .service-content {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.section-home-2 .service-card .image-wrapper {
+  width: 140px;
+  height: 140px;
+}
+
+.section-home-2 .service-card .service-title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  font-family: var(--font-clash);
+}
+
+.section-home-2 .service-card .service-subtitle {
+  font-size: 1rem;
+  line-height: 1.1;
+  font-weight: 300;
+}
+/* End of Section Home 2 */
+
+/* Section Home 3 */
+.section-home-3 {
+  background-image: url('/img/bg-home-3.webp');
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.section-home-3 .container {
+  /* padding: 4rem 0; */
+  display: grid;
+  gap: 3rem;
+}
+
+.section-home-3 .section-title {
+  text-align: center;
+}
+
+/* .section-home-3 .section-content {
+  margin-top: 3rem;
+} */
+
+.project-wrapper {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.project-card {
+  height: 22.5rem;
+  border-radius: 1.25rem;
+  padding: 1.25rem;
+  display: grid;
+  align-content: end;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card .project-overlay {
+  background-color: rgba(16, 16, 16, 0.3);
+  border-radius: 1.25rem;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+  opacity: 0;
+}
+
+.project-card .project-overlay.muncul {
+  opacity: 1;
+}
+
+.project-card .project-image {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+.project-card .project-content {
+  gap: 0.5rem;
+  z-index: 10;
+  position: absolute;
+  left: 1.25rem;
+  bottom: -60px;
+  opacity: 0;
+  transition: all 0.3s linear;
+}
+
+.project-card:hover .project-content {
+  opacity: 1;
+  bottom: 1.25rem !important;
+  transition: all 0.3s linear;
+}
+
+.project-card .project-title {
+  font-size: 1.5rem;
+}
+
+.project-card .project-subtitle {
+  font-size: 1.1rem;
+  font-family: var(--font-archivo);
+}
+
+.section-home-3 .btn-all-project-wrapper {
+  text-align: center;
+}
+
+.section-home-3 .btn-all-project-wrapper .btn-all-project {
+  background: white;
+  border: 1px solid white;
+  color: black;
+  padding: 13.25px 32.5px;
+  border-radius: 1.875rem;
+}
+/* End of Section Home 3 */

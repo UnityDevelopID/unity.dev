@@ -1,0 +1,66 @@
+@import 'responsive-header.css';
+.main-header {
+  width: 100%;
+  position: fixed;
+  height: 86px;
+  z-index: 9999;
+}
+
+.main-header .container{
+  padding: 0px!important;
+}
+
+.bg-transparent {
+  background: transparent;
+}
+
+.bg-hitam {
+  background: rgb(16, 16, 16);
+}
+
+.main-header .desktop-menu {
+  height: 86px;
+  align-items: center;
+  grid-template-columns: repeat(2, max-content);
+  justify-content: space-between;
+  z-index: 20;
+}
+
+.main-header .desktop-menu .menu-item-wrapper {
+  gap: 2rem;
+}
+
+.main-header a {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+
+.main-header a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.main-header .brand-wrapper {
+  /* position: absolute;
+  top: 0;
+  left: auto;
+  right: auto; */
+
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 33px;
+}
+
+.main-header .logo-wrapper {
+  height: 20px;
+  /* width: 73px; */
+}
+
+.main-header .logo-wrapper img {
+  object-fit: contain;
+}

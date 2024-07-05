@@ -1,0 +1,12 @@
+@import 'global.css';
+@import 'responsive.css';
+@import 'header.css';
+@import 'footer.css';
+@import 'homepage.css';
+@import 'testi.css';
+@import 'blog.css';
+@import 'clash-font.css';
+
+.page {
+  margin: 0 !important;
+}
